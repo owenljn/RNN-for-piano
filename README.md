@@ -2,7 +2,7 @@
 
 Easy-to-use Deep LSTM Neural Network to generate song like containing improvisation.
 
-[Demo (SoundCloud)](https://soundcloud.com/tsyworks/sets/deep-improvisation)
+[Sample sound tracks (SoundCloud)](https://soundcloud.com/user-259574192/generated-song2)
 
 
 ## Packages needed
