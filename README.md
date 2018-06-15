@@ -1,4 +1,4 @@
-# Deep Improvisation
+# Deep RNN for music generating
 
 Easy-to-use Deep LSTM Neural Network to generate song like containing improvisation.
 
