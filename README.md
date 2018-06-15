@@ -4,35 +4,28 @@ Easy-to-use Deep LSTM Neural Network to generate song like containing improvisat
 
 [Demo (SoundCloud)](https://soundcloud.com/tsyworks/sets/deep-improvisation)
 
-[![screenshot](https://github.com/tatsuyah/deep-improvisation/blob/master/img/jazz.png)](https://soundcloud.com/tsyworks/sets/deep-improvisation)
 
-## Dependencies
+## Packages needed
 
  - Keras
  - TensorFlow
- - Python MIDI
+ - Python MIDI (To install MIDI for python3, run: pip install git+https://github.com/vishnubob/python-midi@feature/python3)
 
-## Usage
+## Usage:
 
-  #### 1. Set up environment (conda recommended)
-
-  ```
-  pip install -r requirements.txt
-  ```
-
-  #### 2. Parse MIDI file to text
+  #### 1. Convert MIDI file to text
 
   ```
   python ./src/parse_midi_to_text.py
   ```
 
-  #### 3. Train the model (GPU recommended)
+  #### 2. Train the model (Tensorflow backend is used by default, and it uses GPU)
 
   ```
   python ./src/training.py
   ```
 
-  #### 4. Generate music
+  #### 3. Generate music
 
   ```
   python ./src/generate_music.py
@@ -40,10 +33,4 @@ Easy-to-use Deep LSTM Neural Network to generate song like containing improvisat
 
 ## Note
 
- - You can use other MIDI file to train the model to generate new song. Change the file `./midi/original/original_song.mid`.
- - MIDI format is usually consist of multiple track and this repository is currently not supporting automatic detection which track is main part of the song. So you may have to choose track as index of the pattern in `parse_midi_to_text.py`.
-
-
-## License
-
-MIT © [Tatsuya Hatanaka](https://github.com/tatsuyah)
+   You can use any music midi file to train an RNN model, however, you should use pure music without lyrics or singer, for example, I used piano plays as training data.
