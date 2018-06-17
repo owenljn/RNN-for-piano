@@ -24,7 +24,7 @@ unique_chunks = sorted(list(set(music_as_chunks)))
 chunk_indices = dict((c, i) for i, c in enumerate(unique_chunks))
 indices_chunk = dict((i, c) for i, c in enumerate(unique_chunks))
 
-maxlen = 15
+maxlen = 120
 step = 1
 part_of_songs = []
 next_chunks = []

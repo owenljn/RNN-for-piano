@@ -26,7 +26,7 @@ unique_chunks = sorted(list(set(music_as_chunks)))
 chunk_indices = dict((c, i) for i, c in enumerate(unique_chunks))
 indices_chunk = dict((i, c) for i, c in enumerate(unique_chunks))
 
-maxlen = 15
+maxlen = 120
 start_index = random.randint(0, len(music_as_chunks) - maxlen - 1)
 
 def sample(preds, temperature=1.0):
@@ -43,14 +43,14 @@ part_of_song = music_as_chunks[0: maxlen]
 generated.extend(part_of_song)
 sys.stdout.write(str(generated))
 
-chunk_length = 1000
+chunk_length = 2000
 for i in range(chunk_length):
   x = np.zeros((1, maxlen, len(unique_chunks)))
   for t, chunk in enumerate(part_of_song):
     x[0, t, chunk_indices[chunk]] = 1.
 
   preds = model.predict(x, verbose=0)[0]
-  distributions = [0.2,  0.6, 1.0, 1.4]
+  distributions = [0.2, 0.6, 1.0, 1.4]
   weight = [0.3, 0.5, 0.1, 0.1]
   distribution = np.random.choice(distributions, p=weight)
   next_index = sample(preds, distribution)
@@ -68,7 +68,7 @@ if not os.path.exists("./midi/"):
   os.mkdir("./midi/generated/")
 elif not os.path.exists("./midi/generated/"):
   os.mkdir("./midi/generated")
-file = "./midi/generated/generated-song5.mid"
+file = "./midi/generated/generated-song6.mid"
 
 pattern = midi.Pattern(resolution=resolution)
 
