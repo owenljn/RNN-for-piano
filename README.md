@@ -1,5 +1,6 @@
 # Deep RNN for music generating
 
+This project is based on Deep Improvisation project: https://github.com/tatsuyah/deep-improvisation
 Easy-to-use Deep LSTM Neural Network to generate song like containing improvisation.
 
 [Sample sound tracks (SoundCloud)](https://soundcloud.com/user-259574192/generated-song2)
@@ -34,3 +35,7 @@ Easy-to-use Deep LSTM Neural Network to generate song like containing improvisat
 ## Note
 
    You can use any music midi file to train an RNN model, however, you should use pure music without lyrics or singer, for example, I used piano plays as training data.
+
+## License
+
+MIT © [Tatsuya Hatanaka](https://github.com/tatsuyah)
